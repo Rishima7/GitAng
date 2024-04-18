@@ -6,16 +6,16 @@ on:
    branches: main
 jobs:
   test: 
-     runs-on: ubantu-latest
-     steps:
-       - name: code checkout
-       - uses: actions/checkout@v3
-       - name: install NODE JS
-       - uses: actions/setup-node@v3
-       - name: intall angular
-       - run: npm install -g @angular/cli
-       - name: install node module
-       - run: npm install
-       - name: run test
-       - run: ng test --no-watch --no-progress --browser=ChromeHeadless
+    runs-on: ubantu-latest
+    steps:
+      - name: code checkout
+        uses: actions/checkout@v3
+      - name: install NODE JS
+        uses: actions/setup-node@v3
+      - name: intall angular
+        run: npm install -g @angular/cli
+      - name: install node module
+        run: npm install
+      - name: run test
+        run: ng test --no-watch --no-progress --browser=ChromeHeadless
  
